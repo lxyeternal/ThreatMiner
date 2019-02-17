@@ -33,8 +33,8 @@ def my_echart():
 
 #在浏览器上渲染my_templaces.html模板
 
-    # return render_template('my_template.html',node_source = end_class,link_source = all_source)
-    return render_template('my_template.html')
+    return render_template('my_template.html',node_source = end_class,link_source = all_source,node_source0 = end_class_main,link_source0 = flask_source_main,node_source1 = end_class_main,link_source1 = flask_source_main,node_source2 = end_class_main,link_source2 = flask_source_main,node_source3 = end_class_main,link_source3 = flask_source_main,node_source4 = end_class_main,link_source4 = flask_source_main,node_source5 = end_class_main,link_source5 = flask_source_main,node_source6 = end_class_main,link_source6 = flask_source_main)
+    # return render_template('my_template.html')
 
 if __name__ == "__main__":
     #运行项目
