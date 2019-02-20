@@ -10,7 +10,7 @@
 <body>
 
     <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
-    <div id="main" style="width:100%;height:700px;"></div>
+    <div id="main" style="width:100%;height:800px;"></div>
     <div id="main0" style="width: 100%;height:700px;"></div>
     <div id="main1" style="width: 100%;height:700px;"></div>
     <div id="main2" style="width: 100%;height:700px;"></div>
@@ -57,7 +57,7 @@
                 orient:'vertical',
                 x: 'left',
                 y: 'top',
-                data: ['forum_0x00sec', 'forum_hackthissite','forum_antionline','forum_garage4hackers','forum_hacktoday','forum_SafeSkyHacks']
+                data: ['overlapping hacker','forum_0x00sec', 'forum_hackthissite','forum_antionline','forum_garage4hackers','forum_hacktoday','forum_SafeSkyHacks']
             },
             series: [
                 {
@@ -101,10 +101,10 @@
                     },
                      force: {
                             edgeLength: [100,200],//线的长度，这个距离也会受 repulsion，支持设置成数组表达边长的范围
-                            repulsion: 10//节点之间的斥力因子。值越大则斥力越大
+                            repulsion: 5//节点之间的斥力因子。值越大则斥力越大
                         },
-                    // minRadius: 15,
-                    // maxRadius: 25,
+                    minRadius: 5,
+                    maxRadius: 30,
                     roam: true,
                     nodes:{{ node_source|safe}},
                     links:{{ link_source|safe}}
@@ -137,7 +137,7 @@
                 orient:'vertical',
                 x: 'left',
                 y: 'top',
-                data: ['forum_0x00sec', 'forum_hackthissite','forum_antionline','forum_garage4hackers','forum_hacktoday','forum_SafeSkyHacks']
+                data: ['overlapping hacker','forum_0x00sec', 'forum_hackthissite','forum_antionline','forum_garage4hackers','forum_hacktoday','forum_SafeSkyHacks']
             },
             series: [
                 {
@@ -218,7 +218,7 @@
                 orient:'vertical',
                 x: 'left',
                 y: 'top',
-                data: ['forum_0x00sec', 'forum_hackthissite','forum_antionline','forum_garage4hackers','forum_hacktoday','forum_SafeSkyHacks']
+                data: ['overlapping hacker','forum_0x00sec', 'forum_hackthissite','forum_antionline','forum_garage4hackers','forum_hacktoday','forum_SafeSkyHacks']
             },
             series: [
                 {
@@ -299,7 +299,7 @@
                 orient:'vertical',
                 x: 'left',
                 y: 'top',
-                data: ['forum_0x00sec', 'forum_hackthissite','forum_antionline','forum_garage4hackers','forum_hacktoday','forum_SafeSkyHacks']
+                data: ['overlapping hacker','forum_0x00sec', 'forum_hackthissite','forum_antionline','forum_garage4hackers','forum_hacktoday','forum_SafeSkyHacks']
             },
             series: [
                 {
@@ -380,7 +380,7 @@
                 orient:'vertical',
                 x: 'left',
                 y: 'top',
-                data: ['forum_0x00sec', 'forum_hackthissite','forum_antionline','forum_garage4hackers','forum_hacktoday','forum_SafeSkyHacks']
+                data: ['overlapping hacker','forum_0x00sec', 'forum_hackthissite','forum_antionline','forum_garage4hackers','forum_hacktoday','forum_SafeSkyHacks']
             },
             series: [
                 {
@@ -461,7 +461,7 @@
                 orient:'vertical',
                 x: 'left',
                 y: 'top',
-                data: ['forum_0x00sec', 'forum_hackthissite','forum_antionline','forum_garage4hackers','forum_hacktoday','forum_SafeSkyHacks']
+                data: ['overlapping hacker','forum_0x00sec', 'forum_hackthissite','forum_antionline','forum_garage4hackers','forum_hacktoday','forum_SafeSkyHacks']
             },
             series: [
                 {
@@ -542,7 +542,7 @@
                 orient:'vertical',
                 x: 'left',
                 y: 'top',
-                data: ['forum_0x00sec', 'forum_hackthissite','forum_antionline','forum_garage4hackers','forum_hacktoday','forum_SafeSkyHacks']
+                data: ['overlapping hacker','forum_0x00sec', 'forum_hackthissite','forum_antionline','forum_garage4hackers','forum_hacktoday','forum_SafeSkyHacks']
             },
             series: [
                 {
@@ -623,7 +623,7 @@
                 orient:'vertical',
                 x: 'left',
                 y: 'top',
-                data: ['forum_0x00sec', 'forum_hackthissite','forum_antionline','forum_garage4hackers','forum_hacktoday','forum_SafeSkyHacks']
+                data: ['overlapping hacker','forum_0x00sec', 'forum_hackthissite','forum_antionline','forum_garage4hackers','forum_hacktoday','forum_SafeSkyHacks']
             },
             series: [
                 {

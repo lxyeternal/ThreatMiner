@@ -2,6 +2,7 @@
 
 import csv
 import pymysql
+import itertools
 
 # 连接数据库
 db = pymysql.connect("127.0.0.1",
@@ -10,6 +11,8 @@ db = pymysql.connect("127.0.0.1",
                      "user",
                      use_unicode=True,
                      charset="utf8")
+
+over_hacker_order = list(itertools.combinations([6,7,8,9,10,11],2))
 
 # 对黑客关系邻接矩阵进行处理
 def getcsv_mian():
@@ -43,7 +46,8 @@ def getcsv_mian():
             one_source.append(k[j])
             one_source_dict['source'] = one_source[0]
             one_source_dict['target'] = one_source[1]
-            one_source_dict['weight'] = int(one_source[2])
+            # one_source_dict['weight'] = int(one_source[2])
+            one_source_dict['weight'] = 1
             all_source.append(one_source_dict)
         num = num + 1
 
@@ -61,6 +65,8 @@ def networkclass_mian():
     forum_garage4hackers_list = []
     forum_hacktoday_list = []
     forum_SafeSkyHacks_list = []
+    over_hacker_name_list = []
+    class_over_hacker_name_list = []
 
     cursor = db.cursor()
 
@@ -72,31 +78,54 @@ def networkclass_mian():
     for row in results:
 
         user_num = user_num + 1
-
+        flag = 0
         #   user_value表示网络图中圆圈的大小，值越大圈越大，越明显
 
         if row[5] >= 0.0007872425:
-            user_value = 10
+            user_value = 50
+            user_symbolSize = 20
         elif row[5] >= 0.000453549:
-            user_value = 8
+            user_value = 30
+            user_symbolSize = 16
         elif row[5] >= 0.0002265917:
-            user_value = 6
+            user_value = 20
+            user_symbolSize = 13
         elif row[5] >= 0.0001289066:
-            user_value = 4
+            user_value = 10
+            user_symbolSize = 10
         elif row[5] >= 0.0000544649:
-            user_value = 2
+            user_value = 5
+            user_symbolSize = 6
         else:
-            user_value = 1
+            user_value = 3
+            user_symbolSize = 3
 
         try:
-            if user_num <= 1000:
+            if user_num <= 100:
 
                 one_class_dict = {}                         #  对每一行数据按照flask要求进行格式化
+
+                for k in over_hacker_order:
+                    if row[k[0]] == 1 and row[k[1]] == 1:
+                        flag = 1
+                        over_hacker_name_list.append(str(row[1]))
+                        one_class_dict['category'] = 0  # 黑客的所属论坛的分类
+                        one_class_dict['name'] = str(row[1])  # 黑客的用户名
+                        one_class_dict['value'] = user_value  # 黑客对应的权重大小
+                        one_class_dict['symbolSize'] = user_symbolSize
+                        end_class.append(one_class_dict)
+                        class_over_hacker_name_list.append(one_class_dict)
+                        break
+
+                if flag == 1:
+                    continue
+
                 if row[6] == 1:
                     forum_0x00sec_list.append(str(row[1]))
                     one_class_dict['category'] = 1          #   黑客的所属论坛的分类
                     one_class_dict['name'] = str(row[1])    #   黑客的用户名
                     one_class_dict['value'] = user_value    #   黑客对应的权重大小
+                    one_class_dict['symbolSize'] = user_symbolSize
                     end_class.append(one_class_dict)
                     continue
                 if row[7] == 1:
@@ -104,6 +133,7 @@ def networkclass_mian():
                     one_class_dict['category'] = 2
                     one_class_dict['name'] = str(row[1])
                     one_class_dict['value'] = user_value
+                    one_class_dict['symbolSize'] = user_symbolSize
                     end_class.append(one_class_dict)
                     continue
                 if row[8] == 1:
@@ -112,6 +142,7 @@ def networkclass_mian():
                         one_class_dict['category'] = 3
                         one_class_dict['name'] = '妯py展ght'
                         one_class_dict['value'] = user_value
+                        one_class_dict['symbolSize'] = user_symbolSize
                         end_class.append(one_class_dict)
                         continue
                     if row[1] == u'\u4e09he\u53c8pe\u59c6alist':
@@ -119,6 +150,7 @@ def networkclass_mian():
                         one_class_dict['category'] = 3
                         one_class_dict['name'] = '三he又pe姆alist'
                         one_class_dict['value'] = user_value
+                        one_class_dict['symbolSize'] = user_symbolSize
                         end_class.append(one_class_dict)
                         continue
                     if row[1] == u'\xa9opy\xaeight':
@@ -126,6 +158,7 @@ def networkclass_mian():
                         one_class_dict['category'] = 3
                         one_class_dict['name'] = '©opy®ight'
                         one_class_dict['value'] = user_value
+                        one_class_dict['symbolSize'] = user_symbolSize
                         end_class.append(one_class_dict)
                         continue
                     else:
@@ -133,6 +166,7 @@ def networkclass_mian():
                         one_class_dict['category'] = 3
                         one_class_dict['name'] = str(row[1])
                         one_class_dict['value'] = user_value
+                        one_class_dict['symbolSize'] = user_symbolSize
                         end_class.append(one_class_dict)
                         continue
                 if row[9] == 1:
@@ -141,6 +175,7 @@ def networkclass_mian():
                         one_class_dict['category'] = 4
                         one_class_dict['name'] = 'улыбайся'
                         one_class_dict['value'] = user_value
+                        one_class_dict['symbolSize'] = user_symbolSize
                         end_class.append(one_class_dict)
                         continue
                     if row[1] == u'\xabspeed|light\xbb':
@@ -148,6 +183,7 @@ def networkclass_mian():
                         one_class_dict['category'] = 4
                         one_class_dict['name'] = '«speed | light»'
                         one_class_dict['value'] = user_value
+                        one_class_dict['symbolSize'] = user_symbolSize
                         end_class.append(one_class_dict)
                         continue
                     else:
@@ -155,6 +191,7 @@ def networkclass_mian():
                         one_class_dict['category'] = 4
                         one_class_dict['name'] = str(row[1])
                         one_class_dict['value'] = user_value
+                        one_class_dict['symbolSize'] = user_symbolSize
                         end_class.append(one_class_dict)
                         continue
 
@@ -163,6 +200,7 @@ def networkclass_mian():
                     one_class_dict['category'] = 5
                     one_class_dict['name'] = str(row[1])
                     one_class_dict['value'] = user_value
+                    one_class_dict['symbolSize'] = user_symbolSize
                     end_class.append(one_class_dict)
                     continue
                 if row[11] == 1:
@@ -171,6 +209,7 @@ def networkclass_mian():
                         one_class_dict['category'] = 6
                         one_class_dict['name'] = str(row[1])
                         one_class_dict['value'] = user_value
+                        one_class_dict['symbolSize'] = user_symbolSize
                         end_class.append(one_class_dict)
                         continue
                     except:
@@ -178,6 +217,7 @@ def networkclass_mian():
                         one_class_dict['category'] = 6
                         one_class_dict['name'] = str(row[1][0])
                         one_class_dict['value'] = user_value
+                        one_class_dict['symbolSize'] = user_symbolSize
                         end_class.append(one_class_dict)
                         continue
         except:

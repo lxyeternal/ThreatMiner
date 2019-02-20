@@ -1,6 +1,6 @@
 #coding:utf-8
 
-from flask import Flask,render_template,url_for
+from flask import Flask,render_template
 from all_hacker import *
 from main_hacker import *
 
@@ -33,8 +33,7 @@ def my_echart():
 
 #在浏览器上渲染my_templaces.html模板
 
-    return render_template('my_template.html',node_source = end_class,link_source = all_source,node_source0 = end_class_main,link_source0 = flask_source_main,node_source1 = end_class_main,link_source1 = flask_source_main,node_source2 = end_class_main,link_source2 = flask_source_main,node_source3 = end_class_main,link_source3 = flask_source_main,node_source4 = end_class_main,link_source4 = flask_source_main,node_source5 = end_class_main,link_source5 = flask_source_main,node_source6 = end_class_main,link_source6 = flask_source_main)
-    # return render_template('my_template.html')
+    return render_template('my_template.html',node_source = end_class,link_source = all_source,node_source0 = end_class_main,link_source0 = flask_source_main,node_source1 = class_forum_0x00sec_list,link_source1 = source_forum_0x00sec_list,node_source2 = class_forum_hackthissite_list,link_source2 = source_forum_hackthissite_list,node_source3 = class_forum_antionline_list,link_source3 = source_forum_antionline_list,node_source4 = class_forum_garage4hackers_list,link_source4 = source_forum_garage4hackers_list,node_source5 = class_forum_hacktoday_list,link_source5 = source_forum_hacktoday_list,node_source6 = class_forum_SafeSkyHacks_list,link_source6 = source_forum_SafeSkyHacks_list)
 
 if __name__ == "__main__":
     #运行项目
