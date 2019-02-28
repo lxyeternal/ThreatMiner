@@ -1,0 +1,76 @@
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+2019-02-28 14:36:16,907 werkzeug     INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-02-28 14:36:16,908 werkzeug     INFO      * Restarting with stat
+2019-02-28 14:36:17,131 werkzeug     WARNING   * Debugger is active!
+2019-02-28 14:36:17,132 werkzeug     INFO      * Debugger PIN: 310-895-106
+Traceback (most recent call last):
+  File "./manage.py", line 3, in <module>
+    from app import create_app
+  File "/root/hacker/flask_hacker/flask-adminlte-scaffold-master/app/__init__.py", line 2, in <module>
+    from flask_login import LoginManager
+ModuleNotFoundError: No module named 'flask_login'
+2019-02-28 15:08:06,903 werkzeug     INFO      * Detected change in '/root/hacker/flask_hacker/flask-adminlte-scaffold-master/app/models.py', reloading
+2019-02-28 15:08:06,940 werkzeug     INFO      * Restarting with stat
+Traceback (most recent call last):
+  File "./manage.py", line 6, in <module>
+    app = create_app(os.getenv('FLASK_CONFIG') or 'default')
+  File "/root/hacker/flask_hacker/flask-adminlte-scaffold-master/app/__init__.py", line 32, in create_app
+    from .main import main as main_blueprint
+  File "/root/hacker/flask_hacker/flask-adminlte-scaffold-master/app/main/__init__.py", line 5, in <module>
+    from . import views, forms, errors
+  File "/root/hacker/flask_hacker/flask-adminlte-scaffold-master/app/main/views.py", line 5, in <module>
+    from app import utils
+  File "/root/hacker/flask_hacker/flask-adminlte-scaffold-master/app/utils.py", line 7, in <module>
+    from app.models import CfgNotify
+  File "/root/hacker/flask_hacker/flask-adminlte-scaffold-master/app/models.py", line 25
+    except:
+          ^
+IndentationError: unindent does not match any outer indentation level
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+2019-02-28 15:34:39,860 werkzeug     INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-02-28 15:34:39,861 werkzeug     INFO      * Restarting with stat
+2019-02-28 15:34:40,091 werkzeug     WARNING   * Debugger is active!
+2019-02-28 15:34:40,092 werkzeug     INFO      * Debugger PIN: 310-895-106
+2019-02-28 21:03:15,651 werkzeug     INFO      * Detected change in '/root/hacker/flask_hacker/flask-adminlte-scaffold-master/manage.py', reloading
+2019-02-28 21:03:15,684 werkzeug     INFO      * Restarting with stat
+2019-02-28 21:03:15,902 werkzeug     WARNING   * Debugger is active!
+2019-02-28 21:03:15,902 werkzeug     INFO      * Debugger PIN: 310-895-106
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+Traceback (most recent call last):
+  File "./manage.py", line 21, in <module>
+    manager.run()
+  File "/root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/flask_script/__init__.py", line 417, in run
+    result = self.handle(argv[0], argv[1:])
+  File "/root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/flask_script/__init__.py", line 386, in handle
+    res = handle(*args, **config)
+  File "/root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/flask_script/commands.py", line 479, in __call__
+    **self.server_options)
+  File "/root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/flask/app.py", line 943, in run
+    run_simple(host, port, self, **options)
+  File "/root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/werkzeug/serving.py", line 795, in run_simple
+    s.bind(get_sockaddr(hostname, port, address_family))
+OSError: [Errno 98] Address already in use
+2019-02-28 21:49:18,140 werkzeug     INFO      * Detected change in '/root/hacker/flask_hacker/flask-adminlte-scaffold-master/manage.py', reloading
+2019-02-28 21:49:18,218 werkzeug     INFO      * Restarting with stat
+2019-02-28 21:49:18,663 werkzeug     WARNING   * Debugger is active!
+2019-02-28 21:49:18,664 werkzeug     INFO      * Debugger PIN: 310-895-106
+2019-02-28 21:51:17,174 werkzeug     INFO      * Detected change in '/root/hacker/flask_hacker/flask-adminlte-scaffold-master/manage.py', reloading
+2019-02-28 21:51:17,266 werkzeug     INFO      * Restarting with stat
+2019-02-28 21:51:17,712 werkzeug     WARNING   * Debugger is active!
+2019-02-28 21:51:17,712 werkzeug     INFO      * Debugger PIN: 310-895-106
+2019-02-28 21:55:04,676 werkzeug     INFO      * Detected change in '/root/hacker/flask_hacker/flask-adminlte-scaffold-master/manage.py', reloading
+2019-02-28 21:55:04,767 werkzeug     INFO      * Restarting with stat
+2019-02-28 21:55:05,218 werkzeug     WARNING   * Debugger is active!
+2019-02-28 21:55:05,218 werkzeug     INFO      * Debugger PIN: 310-895-106
