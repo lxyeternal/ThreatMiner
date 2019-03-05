@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <!-- 引入 echarts.js -->
+    <script src="{{ url_for('static', filename='lib/chart-master/echarts.js') }}"></script>
+</head>
+
+<body>
+
+    <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+    <div id="main6" style="width: 100%;height:700px;"></div>
+
+    <script type="text/javascript">
+
+        // 基于准备好的dom，初始化echarts实例
+        var myChart6 = echarts.init(document.getElementById('main6'));
+
+        var option6 = {
+            title: {
+                text: 'SafeSkyHacks论坛黑客网络拓扑图',
+                subtext: '数据来源 : SafeSkyHacks黑客论坛',
+                top: 'top',
+                left: 'middle'
+            },
+            animationDuration: 1500,
+            animationEasingUpdate: 'quinticInOut',
+            tooltip: {
+                trigger: 'item',
+                formatter: '{a} : {b}'
+            },
+            toolbox: {
+                show: true,
+                feature: {
+                    restore: { show: true },
+                    magicType: { show: true, type: ['force', 'chord'] },
+                    saveAsImage: { show: true }
+                }
+            },
+            legend: {
+                orient:'vertical',
+                x: 'left',
+                y: 'top',
+                data: ['overlapping hacker','forum_0x00sec', 'forum_hackthissite','forum_antionline','forum_garage4hackers','forum_hacktoday','forum_SafeSkyHacks']
+            },
+            series: [
+                {
+                    type: 'graph',
+                    name: "人物关系",
+                    layout: 'force',
+                    draggable: true,
+                    categories: [
+                        {
+                            name: 'overlapping hacker'
+                        },
+                        {
+                            name: 'forum_0x00sec'
+                        },
+                        {
+                            name: 'forum_hackthissite'
+                        },
+                        {
+                            name: 'forum_antionline'
+                        },
+                        {
+                            name: 'forum_garage4hackers'
+                        },
+                        {
+                            name: 'forum_hacktoday'
+                        },
+                        {
+                            name: 'forum_SafeSkyHacks'
+                        }
+
+                    ],
+                    label: {
+                        show: true,
+                        position: 'inside',
+                    },
+                    lineStyle: {
+                        normal: {
+                            show : true,
+                            color: 'source',
+                            curveness: 0.3
+                        }
+                    },
+                     force: {
+                            edgeLength: [100,200],//线的长度，这个距离也会受 repulsion，支持设置成数组表达边长的范围
+                            repulsion: 10//节点之间的斥力因子。值越大则斥力越大
+                        },
+                    // minRadius: 15,
+                    // maxRadius: 25,
+                    roam: true,
+                    nodes:{{ node_source6|safe}},
+                    links:{{ link_source6|safe}}
+                    }
+            ]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+    
+        myChart6.setOption(option6,true);
+
+</script>
+</body>
+</html>
+
