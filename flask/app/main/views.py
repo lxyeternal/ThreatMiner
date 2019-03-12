@@ -3,6 +3,7 @@ import sys
 sys.path.append("/Users/apple/Downloads/flask")
 from all_hacker import *
 from main_hacker import *
+from figure_hack import *
 from app import get_logger, get_config
 import math
 from flask import render_template, redirect, url_for, flash, request
@@ -38,6 +39,26 @@ all_source_main = getcsv_mian()
 end_class_main, user_list = networkclass_mian()                 # end_class_main:前1000个黑客分类的格式化数据
 flask_source_main = source_main(all_source_main, user_list)     # flask_source_main：前1000个黑客之间的关系的格式化数据
 
+new_sec_list = figure_users(sql_new, sql_0x00sec)
+new_hackthissite_list = figure_users(sql_new, sql_hackthissite)
+new_antionline_list = figure_users(sql_new, sql_antionline)
+new_garage4hackers_list = figure_users(sql_new, sql_garage4hackers)
+new_hacktoday_list = figure_users(sql_new, sql_hacktoday)
+new_SafeSkyHacks_list = figure_users(sql_new, sql_SafeSkyHacks)
+
+alive_sec_list = figure_users(sql_alive, sql_0x00sec)
+alive_hackthissite_list = figure_users(sql_alive, sql_hackthissite)
+alive_antionline_list = figure_users(sql_alive, sql_antionline)
+alive_garage4hackers_list = figure_users(sql_alive, sql_garage4hackers)
+alive_hacktoday_list = figure_users(sql_alive, sql_hacktoday)
+alive_SafeSkyHacks_list = figure_users(sql_alive, sql_SafeSkyHacks)
+
+all_sec_list = all_user(sql_all, sql_0x00sec)
+all_hackthissite_list = all_user(sql_all, sql_hackthissite)
+all_antionline_list = all_user(sql_all, sql_antionline)
+all_garage4hackers_list = all_user(sql_all, sql_garage4hackers)
+all_hacktoday_list = all_user(sql_all, sql_hacktoday)
+all_SafeSkyHacks_list = all_user(sql_all, sql_SafeSkyHacks)
 
 # 通用列表查询
 def common_list(DynamicModel, view):
@@ -182,37 +203,37 @@ def echats():
 @main.route('/table_0x00sec', methods=['GET', 'POST'])
 @login_required
 def table_0x00sec():
-    return render_template('table_0x00sec.html')
+    return render_template('table_0x00sec.html',new_sec_list = new_sec_list,alive_sec_list = alive_sec_list,all_sec_list = all_sec_list)
 
 # hackthissite论坛用户画像查询
 @main.route('/table_hackthissite', methods=['GET', 'POST'])
 @login_required
 def table_hackthissite():
-    return render_template('table_hackthissite.html')
+    return render_template('table_hackthissite.html',new_hackthissite_list = new_hackthissite_list,alive_hackthissite_list = alive_hackthissite_list,all_hackthissite_list = all_hackthissite_list)
 
 # antionline论坛用户画像查询
 @main.route('/table_antionline', methods=['GET', 'POST'])
 @login_required
 def table_antionline():
-    return render_template('table_antionline.html')
+    return render_template('table_antionline.html',new_antionline_list = new_antionline_list,alive_antionline_list = alive_antionline_list,all_antionline_list = all_antionline_list)
 
 # garage4hackers论坛用户画像查询
 @main.route('/table_garage4hackers', methods=['GET', 'POST'])
 @login_required
 def table_garage4hackers():
-    return render_template('table_garage4hackers.html')
+    return render_template('table_garage4hackers.html',new_garage4hackers_list = new_garage4hackers_list,alive_garage4hackers_list = alive_garage4hackers_list,all_garage4hackers_list = all_garage4hackers_list)
 
 # hacktoday论坛用户画像查询
 @main.route('/table_hacktoday', methods=['GET', 'POST'])
 @login_required
 def table_hacktoday():
-    return render_template('table_hacktoday.html')
+    return render_template('table_hacktoday.html',new_hacktoday_list = new_hacktoday_list,alive_hacktoday_list = alive_hacktoday_list,all_hacktoday_list = all_hacktoday_list)
 
 # safeSkyHacks论坛用户画像查询
 @main.route('/table_safeSkyHacks', methods=['GET', 'POST'])
 @login_required
 def table_safeSkyHacks():
-    return render_template('table_safeSkyHacks.html')
+    return render_template('table_safeSkyHacks.html',new_SafeSkyHacks_list = new_sec_list,alive_SafeSkyHacks_list = alive_SafeSkyHacks_list,all_SafeSkyHacks_list = all_SafeSkyHacks_list)
 
 # 通知方式配置
 @main.route('/notifyedit', methods=['GET', 'POST'])
