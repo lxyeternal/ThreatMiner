@@ -19,7 +19,7 @@ db = pymysql.connect("127.0.0.1",
 view_button = "查看"
 delete_button = "删除"
 
-sql_new = ['create_time','ASC']
+sql_new = ['create_time','DESC']
 sql_alive = ['rank_page','DESC']
 sql_all = ['user_name','ASC']
 
@@ -71,10 +71,8 @@ def figure_users(sql_list,sql_forums):
             count = count + 1
             user_list.append(user_name)
             user_list.append(reg_date)
-            # user_list.append(view_button)
-            # user_list.append(delete_button)
             new_forums_list.append(user_list)
-    print(new_forums_list)
+    # print(new_forums_list)
     return new_forums_list
 
 def all_user(sql_list,sql_forums):
@@ -94,8 +92,6 @@ def all_user(sql_list,sql_forums):
         reg_date = year_date + "-" + mon_date + "-" + day_date
         user_list.append(user_name)
         user_list.append(reg_date)
-        # user_list.append(view_button)
-        # user_list.append(delete_button)
         all_forums_list.append(user_list)
     return all_forums_list
 

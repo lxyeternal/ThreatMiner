@@ -5,6 +5,7 @@ from all_hacker import *
 from main_hacker import *
 from figure_hack import *
 from app import get_logger, get_config
+from radar import *
 import math
 from flask import render_template, redirect, url_for, flash, request
 from flask_login import login_required, current_user 
@@ -144,12 +145,12 @@ def all_network():
     # return common_list(CfgNotify, 'all_network.html')
     return render_template('all_network.html',node_source = end_class,link_source = all_source,node_source0 = end_class_main,link_source0 = flask_source_main,node_source1 = class_forum_0x00sec_list,link_source1 = source_forum_0x00sec_list,node_source2 = class_forum_hackthissite_list,link_source2 = source_forum_hackthissite_list,node_source3 = class_forum_antionline_list,link_source3 = source_forum_antionline_list,node_source4 = class_forum_garage4hackers_list,link_source4 = source_forum_garage4hackers_list,node_source5 = class_forum_hacktoday_list,link_source5 = source_forum_hacktoday_list,node_source6 = class_forum_SafeSkyHacks_list,link_source6 = source_forum_SafeSkyHacks_list)
 
-# top1000社交网络图
-@main.route('/top1000', methods=['GET', 'POST'])
+# top100社交网络图
+@main.route('/top100', methods=['GET', 'POST'])
 @login_required
-def top1000():
+def top100():
 
-    return render_template('top1000.html',node_source0 = end_class_main,link_source0 = flask_source_main)
+    return render_template('top100.html',node_source0 = end_class_main,link_source0 = flask_source_main)
 
 # 0x00sec论坛社交网络图
 @main.route('/0x00sec', methods=['GET', 'POST'])
@@ -194,10 +195,16 @@ def safeSkyHacks():
     return render_template('safeSkyHacks.html',node_source6 = class_forum_SafeSkyHacks_list,link_source6 = source_forum_SafeSkyHacks_list)
 
 # 黑客用户画像查询
-@main.route('/echats', methods=['GET', 'POST'])
-@login_required
-def echats():
-    return render_template('echats.html')
+@main.route('/echats/<username>', methods=['GET', 'POST'])
+def echats(username):
+    user_infro,user_forums,word_list = user_information(username)
+    user_rank = rank_hacker(username,user_forums)
+    user_posts = user_post(username)
+    user_radar = one_user_radar(username)
+    user_acti = user_act(username,user_forums)
+    user_rec = user_rec_post(username)
+    user_activate = user_alive(username)
+    return render_template('echats.html',username = username,user_infro = user_infro,user_rank = user_rank,user_posts = user_posts,user_radar = user_radar,user_acti = user_acti,user_rec = user_rec,word_list = word_list,user_activate = user_activate)
 
 # 0x00sec论坛用户画像查询
 @main.route('/table_0x00sec', methods=['GET', 'POST'])
