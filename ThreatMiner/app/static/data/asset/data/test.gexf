@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns:viz="http://www.gexf.net/1.2draft/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.gephi.org/gexf/1.2draft" xmlns:ns0="xsi" version="1.2" ns0:schemaLocation="http://www.gephi.org/gexf/1.1draft http://gephi.org/gexf/1.2draft.xsd">
+  <meta lastmodified="2019-04-02">
+    <creator>Paul Girard</creator>
+    <description>A hello world! file</description>
+  </meta>
+  <graph defaultedgetype="directed" label="a hello world graph" mode="static" timeformat="double">
+    <attributes class="node" mode="static">
+      <attribute id="modularity_class" title="Modularity Class" type="integer"/>
+    </attributes>
+    <nodes>
+      <node id="0" label="Gephi">
+        <attvalues>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+      </node>
+      <node id="1" label="cew">
+        <attvalues>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+      </node>
+      <node id="2" label="vserb">
+        <attvalues>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+      </node>
+      <node id="3" label="nty">
+        <attvalues>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+      </node>
+      <node id="4" label="muty">
+        <attvalues>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+      </node>
+      <node id="5" label="cew">
+        <attvalues>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="0" source="0" target="1" weight="4"/>
+      <edge id="1" source="1" target="2" weight="4"/>
+      <edge id="2" source="0" target="2" weight="4"/>
+      <edge id="3" source="4" target="3" weight="4"/>
+      <edge id="4" source="2" target="4" weight="4"/>
+    </edges>
+  </graph>
+</gexf>

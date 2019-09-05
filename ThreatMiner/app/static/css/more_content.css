@@ -1,0 +1,28 @@
+.content{
+	padding:10px 12px 48px;
+	font-size:18px;
+	color:#2b2b2b;
+	line-height:1.7em;
+	height:300px;		/*初始要显示的高度*/
+	overflow:hidden;	/*关键样式：内容会被修剪，并且其余内容是不可见的。*/
+	position:relative
+}
+.content div{			/*获取更多内容图标div*/
+	clear:both;
+	min-height:1em;
+	white-space:pre-wrap; /*如何处理元素内的空白*/
+}
+.get_ct_more {
+	height:78px;
+	position:absolute;
+	bottom:0px;width:100%;
+	background:linear-gradient(to top,#fff,rgba(255,255,255,0) 70%);
+	margin:0px;
+	margin-right:10px
+}
+.more_bt {
+	width:16px;
+	height:16px;
+	margin-left:36%;
+	margin-bottom:-10px
+}

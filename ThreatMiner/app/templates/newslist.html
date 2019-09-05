@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ topic[0] }}</title>
+    <link rel="stylesheet" type="text/css" href="../static/news_list/style.css" />
+</head>
+<body>
+
+    <div class="newsCenterPanel">
+        <div class="title">
+            <a href="{{ url_for('main.threats_list',list_type = alink ) }}" target="_self">{{ topic[0] }}</a>
+        </div>
+         <div class="title1">
+            <a href="{{ url_for('main.threats_list',list_type = alink ) }}" target="_self">{{ topic[1] }}</a>
+        </div>
+        <div class="newsCenterPanel_inner">
+            <div class="newContentBox odd">
+                <a hidefocus="true" href="{{ url_for('main.weibu4') }}">
+                    <div class="time">
+                        <p class="day">3</p>
+                        <p class="ym">2019-05</p>
+                    </div>
+                    <div class="newTitle">  Wall Street Market seized by law enforcement agencies from Germany, the US, the Netherlands, and Romania.</div>
+                    <div class="newTitleIcon"></div>
+                    <div class="border"></div>
+                    <div class="newContent">
+                        German police, together with Europol and law enforcement agencies from the US, the Netherlands, and Romania, have seized the servers of a dark web marketplace known as the Wall Street Market, on which users sold illegal products such as drugs, weapons, user credentials, and hacking tools, ZDNet has learned. The site's seizure comes after a tumultuous two weeks for the Wall Street Market (WSM) and its users, during which the site's administrators have exit-scammed --ran away with over $14.2 million worth of cryptocurrency from users and vendors' accounts.
+                    </div>
+                    <div class="tags">
+                        <div class="ioc">IOC 1</div>
+                        <div class="tag">安全事件讨论</div>
+                        <div class="tag">黑客市场交易</div>
+                    </div>
+                </a>
+            </div>
+            <div class="newContentBox even">
+                <a hidefocus="true" href="{{ url_for('main.weibu3') }}">
+                    <div class="time">
+                        <p class="day">3</p>
+                        <p class="ym">2019-05</p>
+                    </div>
+                    <div class="newTitle">  Dumps and Cvv Update 100% Valid Rate</div>
+
+                    <div class="newTitleIcon"></div>
+                    <div class="border"></div>
+                    <div class="newContent">
+                         Buy Dumps With Pin – track 1 and 2 dumps with pin with high balance. We are a professional Russian
+                carding and hacking team, working previously on EVO market place and Alpha Bay. We offer private
+                services, sales and sup
+                    </div>
+                     <div class="tags">
+                        <div class="ioc">IOC 1</div>
+                        <div class="tag">黑客市场交易</div>
+                        <div class="tag">黑客资产传播</div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="newContentBox odd">
+                <a hidefocus="true" href="{{ url_for('main.weibu2') }}">
+                    <div class="time">
+                        <p class="day">2</p>
+                        <p class="ym">2019-05</p>
+                    </div>
+                    <div class="newTitle">   Hope the DDOS Attack</div>
+                    <div class="newTitleIcon"></div>
+                    <div class="border"></div>
+                    <div class="newContent">
+                        RunDos DDoS Service!
+                About:
+                Hey guys! My name is Katherine, but you can call me Kaite and I love Track/Field(Running)! Welcome to RunDos!
+                I am selling Flexible, High, Quality DDoS attacks. The prices are very inexpensive and negotiable! ALSO, you may choose your DDoS method!
+
+                Why Me? :)
+                    </div>
+                    <div class="tags">
+                        <div class="ioc">IOC 2</div>
+                        <div class="tag">黑客网络攻击</div>
+                        <div class="tag">黑客市场交易</div>
+                    </div>
+                </a>
+            </div>
+            <div class="newContentBox even">
+                <a hidefocus="true" href="{{ url_for('main.weibu1') }}">
+                    <div class="time">
+                        <p class="day">28</p>
+                        <p class="ym">2019-04</p>
+                    </div>
+                    <div class="newTitle">  Intruder trojan</div>
+
+                    <div class="newTitleIcon"></div>
+                    <div class="border"></div>
+                    <div class="newContent">
+                       Intruder is a simple trojan that offers a new approach for hackers. It offers what most trojans offer yet its capable of remaining FUD. Most trojans will eventually become fully detected by AV after time. No matter if its crypted or not. And when it becomes detected you of course lose connections. InTruder was made to keep connections and remain FUD. And offer a perfect platform for further infection. And has some good options which ill list for you. 1. Keylogger 2. Active windows Capture 3. Full screen Capture 4. Av Detection system 5. Injection method. 6. Start up Method. 7. Uninstall method 8. Fun Manager 9. Process viewer OS Compatibility: Windows XP Windows Vista Windows 7 Client Scan: Report date:	2011-07-14 08:52:06 (GMT 1) File name:	client-exe File size:	1089722 bytes MD5 hash:	8f05558f973017a1d8c9d3486700e882 SHA1 hash:	58d463f1f769d7e379f2663396aeca068e7169ee Detection rate:	0 on 5 (0%) Status:	CLEAN Antivirus	Database	Engine	Result AVG	14/07/2011	10.0.0.1190 Avira AntiVir	14/05/2019	7.11.7.12 ClamAV	14/05/2019	0.97 Emsisoft	14/05/2019	5.1.0.2 TrendMicro
+                    </div>
+                     <div class="tags">
+                        <div class="ioc">IOC 3</div>
+                        <div class="tag">黑客资产传播</div>
+                        <div class="tag">黑客市场交易</div>
+                    </div>
+                </a>
+
+            </div>
+            {% for content in combine_list %}
+            <div class="newContentBox odd">
+                <a hidefocus="true" href="{{ url_for('main.event_detail', title =content[2],theme1 = content[5],theme2 = content[6]) }}">
+                    <div class="time">
+                        <p class="day">{{ content[0] }}</p>
+                        <p class="ym">{{ content[1] }}</p>
+                    </div>
+                    <div class="newTitle">  {{ content[2] }}</div>
+                    <div class="newTitleIcon"></div>
+                    <div class="border"></div>
+                    <div class="newContent">
+                        {{ content[3] }}
+                    </div>
+                    <div class="tags">
+                        <div class="ioc">{{ content[4] }}</div>
+                        <div class="tag">{{ content[5] }}</div>
+                        <div class="tag">{{ content[6] }}</div>
+                    </div>
+                </a>
+            </div>
+            <div class="newContentBox even">
+                <a hidefocus="true" href="{{ url_for('main.event_detail', title =content[9],theme1 = content[12],theme2 = content[13]) }}">
+                    <div class="time">
+                        <p class="day">{{ content[7] }}</p>
+                        <p class="ym">{{ content[8] }}</p>
+                    </div>
+                    <div class="newTitle">  {{ content[9] }}</div>
+
+                    <div class="newTitleIcon"></div>
+                    <div class="border"></div>
+                    <div class="newContent">
+                        {{ content[10] }}
+                    </div>
+                     <div class="tags">
+                        <div class="ioc">{{ content[11] }}</div>
+                        <div class="tag">{{ content[12] }}</div>
+                        <div class="tag">{{ content[13] }}</div>
+                    </div>
+                </a>
+
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</body>
+
+</html>

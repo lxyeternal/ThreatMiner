@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body style="height: 100%; margin: 0">
+       <div id="container" style="height: 100%"></div>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+app.title = 'Force Layout';
+
+myChart.showLoading();
+$.get('influence_data.gexf', function (xml) {
+    myChart.hideLoading();
+
+    var graph = echarts.dataTool.gexf.parse(xml);
+    var categories = [
+      {name: 'Horror'},
+      {name: 'Romance'},
+      {name: 'Both'},
+      {name: 'None'}
+    ];
+    graph.links.forEach(function (link) {
+        link.lineStyle.normal.width = 2 * Math.sqrt(link.lineStyle.normal.width)
+    });
+    graph.nodes.forEach(function (node) {
+        node.symbolSize = 10 * Math.sqrt(node.symbolSize);
+        node.value = node.symbolSize;
+        node.category = node.attributes.modularity_class;
+        // Use random x, y
+        node.x = node.y = null;
+        node.draggable = true;
+    });
+    option = {
+        title: {
+            text: 'Social Influence',
+            subtext: 'Default layout',
+            top: 'bottom',
+            left: 'right'
+        },
+        tooltip: {},
+        legend: [{
+            // selectedMode: 'single',
+            // data: categories.map(function (a) {
+            //     return a.name;
+            // })
+            data: categories.map(function (a) {
+                return {
+                  name: a.name,
+                  icon: 'circle'
+                  /*icon: {
+                    name: 'circle'//'roundRect'
+                  }*/
+                };
+            }),
+            show: false
+        }],
+        animation: false,
+        series : [
+            {
+                name: 'Les Miserables',
+                type: 'graph',
+                layout: 'force',
+                data: graph.nodes,
+                links: graph.links,
+                edgeSymbol: ['none', 'arrow'], //['circle', 'arrow'],
+                edgeSymbolSize: 10,
+                categories: categories,
+                roam: true,
+                label: {
+                    normal: {
+                        position: 'right'
+                    }
+                },
+                force: {
+                    repulsion: 120, // 100
+                    gravity: 0.01, //0.1,
+                    edgeLength: 30,
+                    layoutAnimation: true
+                }
+            }
+        ]
+    };
+
+    myChart.setOption(option);
+}, 'xml');;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+       </script>
+   </body>
+</html>
