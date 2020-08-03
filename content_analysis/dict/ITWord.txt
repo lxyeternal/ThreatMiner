@@ -1,0 +1,599 @@
+abstract
+base 
+class
+abstract
+abstraction
+access 
+level
+account
+action
+activate
+actual 
+parameter
+adapter
+add in
+address
+space
+ADO ActiveX Data Object ActiveX
+advanced
+aggregation
+algorithm
+alias
+align
+allocate
+allocator
+None
+annotation
+API Application Programming Interface
+appearance
+append
+application
+application framework
+Approximate String Matching
+architecture
+archive file
+argument
+array
+arrow operator
+assert
+assign
+assignment
+assignment operator
+associated
+asynchronous
+attribute
+authentication service
+authorization
+background
+backup
+backup device
+backup file
+backward compatible
+base class
+base type
+batch
+BCL base class library
+Bin Packing
+binary
+binding
+bit
+bitmap
+None
+boolean
+border
+bounds checking
+boxing
+brace
+bracket
+breakpoint
+browser applications
+browser accessible application
+bug
+build
+built in
+bus
+business
+business Logic
+business rules
+buttons
+by through
+byte
+cache
+calendar
+None
+call
+call operator
+callback
+candidate key
+cascading delete
+cascading update
+casting
+catalog
+chain
+character
+data
+data connection
+data dictionary
+data file
+data integrity
+data manipulation language DML
+data member
+data source
+Data source name DSN
+data structure
+Data Structures
+data table
+data bound
+database
+database catalog
+dtabase diagram
+database file
+database object
+database project
+database role
+database schema
+database script
+datagram
+dataset
+DBMS database management system
+None
+dead lock
+deallocate
+debug
+debugger
+decay
+declaration
+default
+DEFAULT constraint
+default database
+default instance
+default result set
+defer
+definition
+delegate
+delegation
+deploy
+derived class
+disign pattern
+destroy
+destructor
+device
+DHTML dynamic HyperText Markup Language
+dialog
+Dictionaries
+digest
+digital
+directive
+directory
+disassembler
+dispatch
+None
+distributed query
+DNA Distributed interNet Application
+document
+DOM Document Object Model
+dot operator
+double byte character set
+driver
+DTD document type difinition
+dump
+dump file
+e business
+efficiency
+encapsulation
+end user
+end to end authentication
+engine
+entity
+enum
+enumerators
+equals
+equality
+equality operator
+error log
+escape character
+escape code
+evaluate
+event
+None
+event handler
+evidence
+exception
+exception declaration
+exception handling
+exception specification
+exception safe
+exit
+explicit
+explicit specialization
+explicit transaction
+export
+expression
+fat client
+feature
+fetch
+field
+handle
+handler
+hard disk
+hard coded
+hard copy
+hardware
+hash table
+header file
+heap
+help file
+hierarchical data
+hierarchy
+high level
+hook
+Host
+hot key
+HTML
+HTTP
+HTTP pipeline HTTP
+hyperlink
+None
+IDE Integreated Development Environment
+identifier
+IDL Interface Definition Language
+idle time
+if and only if
+IL Itermadiate Language
+image
+None
+immediate base
+immediate derived
+immediate updating
+implement
+implementation
+implicit
+None
+import
+incremental update
+Independent Set
+index
+infinite loop
+infinite recursive
+information
+None
+initialization
+initialization list
+None
+inline
+None
+inner join
+instance
+instantiated
+instantiation
+integrate
+integrity
+intetrity constraint
+interacts
+interface
+interoperability
+interpreter
+introspection
+invariants
+invoke
+isolation level
+item
+iterate
+iteration
+iterative
+iterator
+JIT compilation JIT
+Job Scheduling
+key
+None
+left outer join
+level
+libaray
+lifetime
+Linear Programming
+link
+linkage
+list
+list box
+literal constant
+livelock
+None
+None
+loader
+None
+local object
+lock
+log
+login
+None
+lookup table
+loop
+loose coupling
+lvalue
+machine code
+macro
+maintain
+managed code
+Managed Extensions
+managed object
+manifest
+None
+many to one relationship
+marshal
+Matching
+member
+memeber access operator dot arrow
+memeber function
+member initialization list
+memory
+memory leak
+menu
+message
+message based
+message loop
+message queuing
+metadata
+metaprogramming
+method
+micro
+middle tier
+meddleware
+modeling
+modeling language
+modem
+named parameter
+named pipe
+namespace
+native
+naive code
+nested class
+nested query
+nested table
+network
+network card
+Network Flow
+object
+object based
+object oriented
+ODBC data source ODBC
+ODBC driver ODBC
+None
+ont to one relationship
+None
+None
+operator
+option
+outer join
+overflow
+overload
+override
+package
+packaging
+palette
+parallel
+parameter
+parameter list
+parameterize
+parent class
+parentheses
+parse
+parser
+part
+partial specialization
+pass by reference
+pass by value
+pattern
+persistence
+pixel
+placeholder
+platform
+Point Location
+pointer
+polymorphism
+pooling
+pop up
+port
+postfix
+precedence
+prefix
+preprocessor
+primary key
+primary table
+primitive type
+None
+printer
+procedure
+process
+program
+programmer
+programming
+progress bar
+project
+property
+protocol
+pseudo code
+qualified
+qualifier
+quality
+queue
+radio button
+random number
+Random Number Generation
+range
+rank
+raw
+re dirrection
+readOnly
+record
+recordset
+recursion
+recursive
+refactoring
+refer
+reference
+reflection
+refresh data
+registre
+None
+relational database
+remote
+remote requset
+represent
+resolution
+resolve
+result set
+retrieve data
+return
+None
+return value
+revoke
+right outer join
+robust
+robustness
+roll back
+roll forward
+routine
+row
+rowset
+RPC remote procedure call RPC
+runtime
+rvalue
+Satisfiablity
+save
+savepoint
+SAX Simple API for XML
+scalable
+schedule
+scheduler
+schema
+scope
+screen
+scroll bar
+SDK sofeware delvelopment kit
+sealed class
+search
+Searching
+semantics
+sequential container
+None
+serialization serialize
+server
+session
+Set and String Problems
+Set Cover
+Set Data Structures
+Set Packing
+setter
+side effect
+signature
+single threaded
+slider
+slot
+SMTP Simple Mail Transfer Protocol
+snapshot
+snapshot
+SOAP simple object access protocol
+software
+Sorting
+source code
+specialization
+specification
+splitter
+SQL Structured Query Language
+stack
+standard library
+standard template library
+stateless
+statement
+static cursor
+static SQL statement SQL
+status bar
+stored procedure
+stream
+string
+String Matching
+stub
+subobject
+subquery
+subscript operator
+support
+suspend
+symbol
+syntax
+system databases
+system tables
+table
+table-level 
+constraint
+target
+task switch 
+TCP (Transport Control Protocol)
+template
+temporary object
+temporary table
+text
+Text Compression 
+text file
+thin client
+third-party
+thread
+thread-safe
+throw
+exception
+trace
+transaction
+transaction 
+log
+transaction 
+rollback
+traverse
+trigger
+type 
+UDDI
+Universary 
+Description
+Discovery
+Integration
+UML
+unary
+unary 
+operator
+unboxing
+underflow
+overflow
+Unicode
+Union 
+query
+UNIQUE 
+constraints
+unique 
+index
+unmanaged 
+code
+unmarshal
+unqualified
+URI 
+Uniform 
+Resource 
+identifier
+URL
+Locator
+user
+user 
+interface
+value types
+variable
+vector
+vendor
+viable
+video
+view
+view
+virtual 
+function
+virtual 
+machine
+virtual 
+memory
+Web
+Services
+WHERE 
+clause
+wildcard characters
+wildcard search
+window 
+window function
+window procedure 
+Windows authentication Windows
+wizard
+word
+write enable
+write-only
+WSDL
+XML
+XML
+XSD
+XSL
+XSLT
+based
+oriented
